@@ -2,7 +2,7 @@
 
 <template>
   <div>
-    <Header />
+    <Search />
   </div>
 </template>
 

@@ -16,6 +16,6 @@ export default defineNuxtConfig({
   },
   intlify: {
     localeDir: './locales',
-    vueI18n: 'i18n.config.mjs'
-  }
+    vueI18n: 'i18n.config.mjs',
+  },
 });

@@ -12,5 +12,8 @@
     "account": "My Account",
     "logout": "Log out",
     "login": "Log in"
+  },
+  "action": {
+    "search": "Search"
   }
 }

@@ -1,4 +1,4 @@
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -7,7 +7,7 @@ module.exports = {
     './layouts/**/*.vue',
     './pages/**/*.vue',
     './plugins/**/*.{js,ts}',
-    './app.vue'
+    './app.vue',
   ],
   theme: {
     colors: {
@@ -24,12 +24,12 @@ module.exports = {
       'orange-2': '#FFFBE8',
       'red-1': '#D80000',
       'red-2': '#FFE8E8',
-      'white-1': '#FFFFFF'
+      'white-1': '#FFFFFF',
     },
     fontFamily: {
-      sans: ['Mulish', 'sans-serif']
+      sans: ['Mulish', 'sans-serif'],
     },
-    extend: {}
+    extend: {},
   },
   plugins: [
     plugin(function ({ addBase }) {
@@ -39,44 +39,44 @@ module.exports = {
           fontWeight: '700',
           lineHeight: '40px',
           letterSpacing: '0em',
-          textAlign: 'left'
+          textAlign: 'left',
         },
         h2: {
           fontSize: '24px',
           fontWeight: '700',
           lineHeight: '30px',
           letterSpacing: '0px',
-          textAlign: 'left'
+          textAlign: 'left',
         },
         h3: {
           fontSize: '16px',
           fontWeight: '700',
           lineHeight: '20px',
           letterSpacing: '0em',
-          textAlign: 'left'
+          textAlign: 'left',
         },
         h4: {
           fontSize: '14px',
           fontWeight: '700',
           lineHeight: '16px',
           letterSpacing: '0px',
-          textAlign: 'left'
+          textAlign: 'left',
         },
         p: {
           fontSize: '14px',
           fontWeight: '400',
           lineHeight: '20px',
           letterSpacing: '0px',
-          textAlign: 'left'
+          textAlign: 'left',
         },
         body: {
           fontSize: '14px',
           fontWeight: '400',
           lineHeight: '20px',
           letterSpacing: '0px',
-          textAlign: 'left'
-        }
-      })
-    })
-  ]
-}
+          textAlign: 'left',
+        },
+      });
+    }),
+  ],
+};

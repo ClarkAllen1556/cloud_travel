@@ -31,7 +31,7 @@ function setSelected(selectedItem: string) {
 
 <style scoped>
 ul {
-  @apply bg-white-1 border border-grey-3 rounded-l-md rounded-r-md;
+  @apply bg-white-1 border border-grey-3 rounded-l-md rounded-r-md select-none;
 }
 
 ul > li {

@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <nav class="flex items-center bg-white-1">
+  <nav class="flex items-center bg-white-1 pl-32 pr-32">
     <img :alt="$t('alt.logo')" src="~/assets/img/logo.jpg" class="h-8 m-3" />
 
     <ul class="flex ml-auto gap-5">

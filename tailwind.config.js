@@ -29,7 +29,11 @@ module.exports = {
     fontFamily: {
       sans: ['Mulish', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      dropShadow: {
+        normal: '0px 1px 6px rgba(0, 0, 0, 0.3)',
+      },
+    },
   },
   plugins: [
     plugin(function ({ addBase }) {

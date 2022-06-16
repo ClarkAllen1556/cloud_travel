@@ -17,6 +17,12 @@
     "search": "Search",
     "map": {
       "view": "Show on map"
+    },
+    "sort": {
+      "pop": "Popularity",
+      "price": "Price (lowest first)",
+      "review": "Reviews",
+      "discount": "Discount"
     }
   }
 }

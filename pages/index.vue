@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-const isLoading = useState<boolean>('isLoading', () => {
-  return true;
-});
+const isLoading = useState<boolean>('isLoading', () => false);
 
 // const toggleLoading = () => {
 //   isLoading.value ? (isLoading.value = false) : (isLoading.value = true);
@@ -19,10 +17,13 @@ const isLoading = useState<boolean>('isLoading', () => {
       </Card>
     </aside>
     <main class="w-screen">
+      <SortPane />
+
       <Card>
         <p>main results</p>
         <Button label="Click me!" />
       </Card>
+
       <!-- <Card>
         <Button @btn-click="toggleLoading" label="Toggle Loading" />
       </Card> -->

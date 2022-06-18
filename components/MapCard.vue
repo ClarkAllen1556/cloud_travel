@@ -23,8 +23,4 @@ const classes = computed(() => {
 </template>
 
 <style scoped>
-.map-card {
-  background-image: url('~/assets/img/map-bg.jpg');
-  background-size: cover;
-}
 </style>

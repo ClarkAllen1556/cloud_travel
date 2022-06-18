@@ -1,7 +1,4 @@
 <script lang='ts' setup>
-defineProps<{
-  query?: string;
-}>();
 </script>
 
 <template>

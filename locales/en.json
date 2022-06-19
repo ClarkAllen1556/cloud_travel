@@ -24,5 +24,8 @@
       "review": "Reviews",
       "discount": "Discount"
     }
+  },
+  "rating": {
+    "out_of": "out of 5 stars"
   }
 }

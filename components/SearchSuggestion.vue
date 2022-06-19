@@ -1,5 +1,5 @@
 <script lang='ts' setup>
-defineProps<{
+const props = defineProps<{
   city: {
     label: string,
     cityCode: string

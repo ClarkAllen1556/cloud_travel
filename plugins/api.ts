@@ -15,9 +15,11 @@ export default defineNuxtPlugin(() => {
     return useFetch(_API_URL + 'job01/autosuggest');
   }
 
-  function _fetchSearch(cityCode: string) {
+  function _fetchSearch(cityCode: string, keys?: string[]) {
     if (process.client) {
-      return useFetch(_PROXY_URL + _API_URL + 'job01/search/' + cityCode);
+      return useFetch(_PROXY_URL + _API_URL + 'job01/search/' + cityCode, {
+        pick: keys,
+      });
     }
 
     return useFetch(_API_URL + 'job01/search/' + cityCode);
@@ -29,13 +31,17 @@ export default defineNuxtPlugin(() => {
       API_URL: _API_URL,
       Resources: _Resources,
 
-      fetchResource: (resource: _Resources, cityCode?: string) => {
+      fetchResource: (
+        resource: _Resources,
+        cityCode?: string,
+        keys?: string[]
+      ) => {
         switch (resource) {
           case _Resources.AutoSuggest: {
             return _fetchSuggestions();
           }
           case _Resources.Search: {
-            return _fetchSearch(cityCode);
+            return _fetchSearch(cityCode, keys);
           }
         }
       },

@@ -9,7 +9,8 @@ const query = ref<string>('');
 const showSuggestions = ref<boolean>(false);
 
 watch(currentCity, async (nCityCode: string) => {
-  const { data: results } = await $fetchResource($Resources.Search, nCityCode)
+  const { data: results } = await $fetchResource($Resources.Search, nCityCode, [ 'outlets' ])
+
   searchResults.value = results
 })
 

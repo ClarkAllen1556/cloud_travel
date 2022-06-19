@@ -1,12 +1,13 @@
 <script lang="ts" setup>
 const isLoading = useState('isLoading');
+const searchResults = useState('searchResults')
 
 const map = reactive({
-  url: '~/assets/img/map-bg.jpg',
+  url: '/assets/img/map-bg.jpg',
 });
 
 const classes = computed(() => {
-  return [isLoading.value ? 'bg-none' : `bg-[url(${map.url})]`];
+  return [isLoading && !searchResults.value ? 'bg-none' : `bg-[url('${map.url}')]`];
 });
 </script>
 

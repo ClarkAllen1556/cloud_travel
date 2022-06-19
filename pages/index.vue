@@ -17,7 +17,7 @@ const searchResults = useState('searchResults', () => {});
     <main class="w-screen">
       <SortPane />
 
-      <Card>
+      <Card class='hover:shadow hover:cursor-pointer'>
         <div>
           {{ searchResults }}
         </div>

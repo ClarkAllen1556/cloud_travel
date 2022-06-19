@@ -17,14 +17,14 @@ const searchResults = useState('searchResults', () => {});
     <main class="w-screen">
       <SortPane />
 
-      <Card class='hover:shadow hover:cursor-pointer'>
+      <Card
+          v-for='(location, i) in searchResults?.outlets.availability.results'
+          :key='i'
+          class='hover:shadow hover:cursor-pointer'
+      >
         <div>
-          {{ searchResults }}
+          <Property :location='location' />
         </div>
-      </Card>
-
-      <Card>
-        <p>main results</p>
       </Card>
     </main>
   </div>

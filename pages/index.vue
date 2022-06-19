@@ -1,9 +1,7 @@
 <script lang="ts" setup>
 const isLoading = useState<boolean>('isLoading', () => false);
-
-// const toggleLoading = () => {
-//   isLoading.value ? (isLoading.value = false) : (isLoading.value = true);
-// };
+const currentCity = useState('currentCity', () => {});
+const searchResults = useState('searchResults', () => {});
 </script>
 
 <template>
@@ -20,13 +18,14 @@ const isLoading = useState<boolean>('isLoading', () => false);
       <SortPane />
 
       <Card>
-        <p>main results</p>
-        <Button label="Click me!" />
+        <div>
+          {{ searchResults }}
+        </div>
       </Card>
 
-      <!-- <Card>
-        <Button @btn-click="toggleLoading" label="Toggle Loading" />
-      </Card> -->
+      <Card>
+        <p>main results</p>
+      </Card>
     </main>
   </div>
 </template>

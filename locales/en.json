@@ -36,6 +36,8 @@
       "half": "Half board",
       "full": "Full board"
     },
-    "refundable": "Free cancellation"
+    "refundable": "Free cancellation",
+    "pay_later": "Pay later",
+    "pay_at_hotel": "Pay at hotel"
   }
 }

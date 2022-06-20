@@ -3,10 +3,10 @@ type Package = {
   adjustedDisplayRate: {
     value: number;
   };
-
   foodCode: number;
-
   nonRefundable: boolean;
+  payLater: boolean;
+  payAtHotel: boolean;
 };
 
 type Reviews = {
@@ -88,6 +88,16 @@ const displayFoodPackage = computed((): boolean => {
       <PropertyLabel
         v-if="cheapestPackage.nonRefundable"
         :refundable="cheapestPackage.nonRefundable"
+      />
+
+      <PropertyLabel
+        v-if="cheapestPackage.payLater"
+        :payLater="cheapestPackage.payLater"
+      />
+
+      <PropertyLabel
+        v-if="cheapestPackage.payAtHotel"
+        :payAtHotel="cheapestPackage.payAtHotel"
       />
     </div>
 

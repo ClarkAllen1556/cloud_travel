@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineProps<{
+const { isDisabled, label } = defineProps<{
   isDisabled?: boolean;
   label?: string;
 }>();

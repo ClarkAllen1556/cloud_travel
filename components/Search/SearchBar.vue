@@ -1,4 +1,6 @@
 <script lang='ts' setup>
+import SearchSuggestionContainer from '~/components/Search/Suggestion/SearchSuggestionContainer.vue';
+
 const { $fetchResource, $Resources } = useNuxtApp()
 
 const currentCity = useState('currentCity');
@@ -37,14 +39,14 @@ function handleCitySelection (cityCode) {
         <input class='w-full outline-none' v-model='query' @focus='setShowSuggestions(true)'/>
       </div>
 
-      <SearchSuggestionBox v-if='showSuggestions && query && query.trim().length'>
-        <SearchSuggestion
+      <SearchSuggestionContainer v-if='showSuggestions && query && query.trim().length'>
+        <SearchSuggestionItem
           v-for='(city, i) in cities'
           :city='city'
           :key='i'
           @item-clicked='handleCitySelection'
         />
-      </SearchSuggestionBox>
+      </SearchSuggestionContainer>
     </div>
 
     <div class='ml-auto'>

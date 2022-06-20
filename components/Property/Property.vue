@@ -80,6 +80,8 @@ const displayFoodPackage = computed((): boolean => {
     </div>
 
     <div>
+      <!--   TODO this should be done in loop   -->
+      <!--   and also be limited to three labels before hiding rest   -->
       <PropertyLabel
         v-if="displayFoodPackage"
         :foodCode="cheapestPackage.foodCode"
@@ -102,7 +104,7 @@ const displayFoodPackage = computed((): boolean => {
     </div>
 
     <div>
-      {{ cheapestPackage.adjustedDisplayRate.value }}
+      <PropertyPrice :propertyPackage="cheapestPackage" />
     </div>
   </div>
 </template>

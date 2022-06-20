@@ -38,6 +38,10 @@
     },
     "refundable": "Free cancellation",
     "pay_later": "Pay later",
-    "pay_at_hotel": "Pay at hotel"
+    "pay_at_hotel": "Pay at hotel",
+    "price": {
+      "save_discount": "Save { p }% today!",
+      "nightly": "Nightly avg."
+    }
   }
 }

@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 const isLoading = useState('isLoading');
 const selected = ref<string | null>();
-const sortingOptions = ref<string[]>([
+const sortingOptions = [
   'action.sort.pop',
   'action.sort.price',
   'action.sort.review',
   'action.sort.discount',
-]);
+];
 
 function setSelected(selectedItem: string) {
   if (isLoading.value) {

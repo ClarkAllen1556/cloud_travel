@@ -31,14 +31,14 @@ const cheapestPackage = computed((): Package => {
 
 const displayFoodPackage = computed((): boolean => {
   // TODO this should use composable food type
-  switch(cheapestPackage.value.foodCode) {
+  switch (cheapestPackage.value.foodCode) {
     case 1:
     case 7:
-      return false
+      return false;
     default:
-      return true
+      return true;
   }
-})
+});
 </script>
 
 <template>
@@ -78,7 +78,10 @@ const displayFoodPackage = computed((): boolean => {
     </div>
 
     <div>
-      <PropertyLabel v-if='displayFoodPackage' :foodCode='cheapestPackage.foodCode' />
+      <PropertyLabel
+        v-if="displayFoodPackage"
+        :foodCode="cheapestPackage.foodCode"
+      />
     </div>
 
     <div>

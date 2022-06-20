@@ -5,6 +5,8 @@ type Package = {
   };
 
   foodCode: number;
+
+  nonRefundable: boolean;
 };
 
 type Reviews = {
@@ -81,6 +83,11 @@ const displayFoodPackage = computed((): boolean => {
       <PropertyLabel
         v-if="displayFoodPackage"
         :foodCode="cheapestPackage.foodCode"
+      />
+
+      <PropertyLabel
+        v-if="cheapestPackage.nonRefundable"
+        :refundable='cheapestPackage.nonRefundable'
       />
     </div>
 

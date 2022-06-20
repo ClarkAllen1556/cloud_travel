@@ -28,13 +28,14 @@
   "rating": {
     "out_of": "out of 5 stars"
   },
-  "food": {
-    "package": {
+  "package": {
+    "food": {
       "breakfast": "Breakfast",
       "lunch": "Lunch",
       "dinner": "Dinner",
       "half": "Half board",
       "full": "Full board"
-    }
+    },
+    "refundable": "Free cancellation"
   }
 }

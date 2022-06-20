@@ -10,8 +10,9 @@ enum FoodCode {
   all
 }
 
-const { foodCode }= defineProps<{
-  foodCode?: number
+const { foodCode, refundable }= defineProps<{
+  foodCode?: number,
+  refundable?: boolean
 }>()
 
 </script>
@@ -19,7 +20,10 @@ const { foodCode }= defineProps<{
 <template>
   <div class='border border-blue-2 text-blue-2 w-min pl-1.5 pr-1.5 whitespace-nowrap'>
     <div v-if='foodCode'>
-      {{ $t(`food.package.${FoodCode[foodCode]}`) }}
+      {{ $t(`package.food.${FoodCode[foodCode]}`) }}
+    </div>
+    <div v-else-if='refundable'>
+      {{ $t(`package.refundable`) }}
     </div>
   </div>
 </template>

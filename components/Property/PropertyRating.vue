@@ -1,10 +1,8 @@
 <script lang="ts" setup>
-const props = defineProps<{
-  rating: number;
-}>();
+const { rating } = defineProps<{ rating: number}>();
 
 const ratingFloor = computed(() => {
-  return Math.floor(props.rating);
+  return Math.floor(rating);
 });
 </script>
 

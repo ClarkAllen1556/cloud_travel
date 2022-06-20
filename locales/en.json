@@ -27,5 +27,14 @@
   },
   "rating": {
     "out_of": "out of 5 stars"
+  },
+  "food": {
+    "package": {
+      "breakfast": "Breakfast",
+      "lunch": "Lunch",
+      "dinner": "Dinner",
+      "half": "Half board",
+      "full": "Full board"
+    }
   }
 }

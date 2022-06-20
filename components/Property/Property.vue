@@ -3,6 +3,8 @@ type Package = {
   adjustedDisplayRate: {
     value: number;
   };
+
+  foodCode: number;
 };
 
 type Reviews = {
@@ -26,6 +28,17 @@ const cheapestPackage = computed((): Package => {
     return prev;
   });
 });
+
+const displayFoodPackage = computed((): boolean => {
+  // TODO this should use composable food type
+  switch(cheapestPackage.value.foodCode) {
+    case 1:
+    case 7:
+      return false
+    default:
+      return true
+  }
+})
 </script>
 
 <template>
@@ -62,6 +75,10 @@ const cheapestPackage = computed((): Package => {
       <p>
         {{ reviews.summary.text }}
       </p>
+    </div>
+
+    <div>
+      <PropertyLabel v-if='displayFoodPackage' :foodCode='cheapestPackage.foodCode' />
     </div>
 
     <div>

@@ -1,46 +1,26 @@
 <script lang="ts" setup>
+// todo abstract this into a composable
+enum FoodCode {
+  roomOnly,
+  breakfast,
+  lunch,
+  dinner,
+  half,
+  full,
+  all
+}
 
-defineProps<{
-  foodCode: FoodCode
+const { foodCode }= defineProps<{
+  foodCode?: number
 }>()
 
 </script>
 
-<script lang='ts'>
-type FoodCode = {
-  RoomOnly: {
-    code: 1,
-    label: 'ROOM_ONLY'
-  },
-  Breakfast: {
-    code: 2,
-    label: 'BREAK_FAST'
-  },
-  Lunch: {
-    code: 3,
-    label: 'LUNCH'
-  },
-  Dinner: {
-    code: 4
-    label: 'DINNER'
-  },
-  Half: {
-    code: 5
-    label: 'HALF'
-  },
-  Full: {
-    code: 6
-    label: 'FULL'
-  },
-  All: {
-    code: 7
-    label: 'ALL'
-  }
-}
-</script>
-
 <template>
-  <div>
+  <div class='border border-blue-2 text-blue-2 w-min pl-1.5 pr-1.5 whitespace-nowrap'>
+    <div v-if='foodCode'>
+      {{ $t(`food.package.${FoodCode[foodCode]}`) }}
+    </div>
   </div>
 </template>
 

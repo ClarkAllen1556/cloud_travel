@@ -87,7 +87,7 @@ const displayFoodPackage = computed((): boolean => {
 
       <PropertyLabel
         v-if="cheapestPackage.nonRefundable"
-        :refundable='cheapestPackage.nonRefundable'
+        :refundable="cheapestPackage.nonRefundable"
       />
     </div>
 

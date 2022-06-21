@@ -43,6 +43,14 @@
     "price": {
       "save_discount": "Save { p }% today!",
       "nightly": "Nightly avg."
+    },
+    "filter": {
+      "reviews": {
+        "title": "Reviews",
+        "scores": {
+          "excellent": "Excelent"
+        }
+      }
     }
   }
 }

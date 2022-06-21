@@ -5,9 +5,15 @@
     <slot />
 
     <Card>
-      <p> Filters </p>
+      <FilterPricePerNight />
+    </Card>
 
-      <Button label='click me! 🤗' />
+    <Card>
+      <FilterReview />
+    </Card>
+
+    <Card>
+      <FilterStar />
     </Card>
   </div>
 </template>

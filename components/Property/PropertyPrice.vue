@@ -8,7 +8,7 @@ const hasDiscount = computed((): boolean => {
   );
 });
 
-const displayPrice = computed((): number => {
+const displayPrice = computed(() => {
   return hasDiscount.value
     ? propertyPackage.adjustedDisplayRate
     : propertyPackage.displayRate;
@@ -30,23 +30,22 @@ const discountAmount = computed((): number => {
 
 <template>
   <div>
-    <div
-      v-if="hasDiscount"
-      class="bg-blue-2 pl-1.5 pr-1.5 w-min whitespace-nowrap text-white-1"
-    >
-      {{ $t('package.price.save_discount', { p: discountAmount }) }}
-    </div>
+    <div class="float-right">
+      <div
+        v-if="hasDiscount"
+        class="bg-blue-2 pl-1.5 pr-1.5 w-min whitespace-nowrap text-white-1 ml-auto"
+      >
+        {{ $t('package.price.save_discount', { p: discountAmount }) }}
+      </div>
 
-    <div>
-      <p>{{ $t('package.price.nightly') }}</p>
+      <div class="_secondary-text">{{ $t('package.price.nightly') }}</div>
 
-      <div>
-        <div v-if="hasDiscount" class="line-through">
+      <div class="flex items-end gap-1">
+        <div class="_secondary-text line-through" v-if="hasDiscount">
           {{ propertyPackage.displayRate.value }}
         </div>
-        <h2>
-          {{ displayPrice.value }}
-        </h2>
+
+        <h2 class="">{{ displayPrice.currency }} {{ displayPrice.value }}</h2>
       </div>
     </div>
   </div>

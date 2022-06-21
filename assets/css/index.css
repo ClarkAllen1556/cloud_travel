@@ -11,3 +11,20 @@ body {
     @apply text-grey-2;
   }
 }
+
+
+/* 
+How to style Select arrow:
+https://stackoverflow.com/questions/56593500/change-the-dropdown-arrow-design
+*/
+select {
+  background: white;
+  padding-right: 30px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url('~/assets/img/select-arrow.svg');
+  background-repeat: no-repeat, repeat;
+  background-position: right 1rem top 50%, 0 0;
+  background-size: 0.75rem auto, 100%;
+}

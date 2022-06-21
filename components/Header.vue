@@ -2,7 +2,7 @@
 
 <template>
   <nav class="flex items-center bg-white-1 pl-32 pr-32">
-    <NuxtLink to='/'>
+    <NuxtLink to="/">
       <img :alt="$t('alt.logo')" src="~/assets/img/logo.jpg" class="h-8 m-3" />
     </NuxtLink>
 
@@ -15,7 +15,7 @@
 
       <li>
         <select>
-          <option>{{ $t('local.cur.usd') }}</option>
+          <option>{{ $t('local.cur.yen') }}</option>
         </select>
       </li>
       <li>

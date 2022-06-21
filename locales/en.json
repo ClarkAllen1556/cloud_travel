@@ -5,7 +5,8 @@
   "local": {
     "lang": "English",
     "cur": {
-      "usd": "USD"
+      "usd": "USD",
+      "yen": "JPY"
     }
   },
   "nav": {

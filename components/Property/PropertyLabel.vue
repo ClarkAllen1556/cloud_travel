@@ -25,12 +25,15 @@ const { foodCode, refundable, payLater, payAtHotel } = defineProps<{
     <div v-if="foodCode">
       {{ $t(`package.food.${FoodCode[foodCode]}`) }}
     </div>
+
     <div v-else-if="refundable">
       {{ $t(`package.refundable`) }}
     </div>
+
     <div v-else-if="payLater">
       {{ $t(`package.pay_later`) }}
     </div>
+
     <div v-else-if="payAtHotel">
       {{ $t(`package.pay_at_hotel`) }}
     </div>

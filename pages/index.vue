@@ -1,23 +1,23 @@
 <script lang="ts" setup>
 // TODO migrate this into a state composable
 const isLoading = useState<boolean>('isLoading', () => false);
-const currentCity = useState<string>('currentCity', () => "");
+const currentCity = useState<string>('currentCity', () => '');
 const searchResults = useState<any>('searchResults', () => {});
 </script>
 
 <template>
   <div id="content">
-      <SortPane />
+    <SortPane />
 
-      <Card
-          v-for='(location, i) in searchResults?.outlets.availability.results'
-          :key='i'
-          class='hover:shadow'
-      >
-        <div>
-          <Property :location='location' />
-        </div>
-      </Card>
+    <Card
+      v-for="(location, i) in searchResults?.outlets.availability.results"
+      :key="i"
+      class="hover:shadow"
+    >
+      <div>
+        <Property :location="location" />
+      </div>
+    </Card>
   </div>
 </template>
 

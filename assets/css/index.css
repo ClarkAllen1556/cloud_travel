@@ -5,3 +5,9 @@
 body {
   @apply bg-grey-1;
 }
+
+@layer components {
+  ._secondary-text {
+    @apply text-grey-2;
+  }
+}

@@ -46,6 +46,11 @@ const displayFoodPackage = computed((): boolean => {
 <template>
   <div>
     <div class="flex">
+      <Gallery
+        :hero="location.property.heroImage"
+        :gallery="location.property.gallery"
+      />
+
       <div>
         <div class="flex gap-1.5 items-center mb-1.5">
           <h3>{{ location.property.name }}</h3>

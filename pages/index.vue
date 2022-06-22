@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-// TODO migrate this into a state composable
 const isLoading = useState<boolean>('isLoading', () => false);
 const currentCity = useState<string>('currentCity', () => '');
 const searchResults = useState<any>('searchResults', () => {});

@@ -19,5 +19,9 @@
         <NuxtPage />
       </main>
     </div>
+
+    <footer class="bottom-0 fixed inset-x-0">
+      <Footer />
+    </footer>
   </div>
 </template>

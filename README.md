@@ -1,4 +1,4 @@
-<img width="200" height="200" src="https://travel.urbanlife.me/_nuxt/logo.73082633.jpg" class="jop-noMdConv">
+<img src="https://travel.urbanlife.me/_nuxt/logo.73082633.jpg" class="jop-noMdConv">
 
 ***
 

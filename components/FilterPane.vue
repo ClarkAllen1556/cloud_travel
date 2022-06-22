@@ -5,15 +5,15 @@
     <slot />
 
     <Card>
-      <FilterPricePerNight />
-    </Card>
-
-    <Card>
       <FilterReview />
     </Card>
 
     <Card>
       <FilterStar />
+    </Card>
+
+    <Card>
+      <FilterName />
     </Card>
   </div>
 </template>

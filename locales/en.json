@@ -65,6 +65,17 @@
       "scores": {
         "none": "No rating"
       }
+    },
+    "name": {
+      "title": "Hotel name",
+      "placeholder": "e.g. Apa..."
     }
+  },
+  "footer": {
+    "faq": "FAQ",
+    "tos": "Terms of use",
+    "privacy": "Privacy policy",
+    "contact": "Contact us",
+    "copy": "Copyright CloudTravel 2022"
   }
 }

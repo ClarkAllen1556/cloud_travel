@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-const isLoading = useState<boolean>('isLoading', () => false);
-const currentCity = useState<string>('currentCity', () => '');
-
+const isLoading = useLoadingState();
 const searchResults = useSearchState();
 
 const hasError = computed(() => {
@@ -21,27 +19,31 @@ const results = computed((): [] | undefined => {
   <div id="content" class="h-full">
     <SortPane />
 
-    <template v-if="hasError">
-      <Message>
-        <MessageError>
-          <template #error>
-            <p>{{ searchResults.error }}</p>
-          </template>
-        </MessageError>
-      </Message>
-    </template>
-    <template v-else-if="results && results.length === 0">
-      <Message>
-        <MessageNoResults />
-      </Message>
-    </template>
+    <Message v-if="isLoading">
+      <Loading />
+    </Message>
     <template v-else>
-      <Card v-for="(location, i) in results" :key="i" class="hover:shadow">
-        <div>
-          <Property :location="location" />
-        </div>
-      </Card>
-    </template>
+      <template v-if="hasError">
+        <Message>
+          <MessageError>
+            <template #error>
+              <p>{{ searchResults.error }}</p>
+            </template>
+          </MessageError>
+        </Message>
+      </template>
+      <template v-else-if="results && results.length === 0">
+        <Message>
+          <MessageNoResults />
+        </Message>
+      </template>
+      <template v-else>
+        <Card v-for="(location, i) in results" :key="i" class="hover:shadow">
+          <div>
+            <Property :location="location" />
+          </div>
+        </Card> </template
+    ></template>
   </div>
 </template>
 

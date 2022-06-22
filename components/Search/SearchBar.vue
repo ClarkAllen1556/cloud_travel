@@ -2,13 +2,16 @@
 const { $fetchResource, $Resources } = useNuxtApp();
 
 const searchResults = useSearchState();
-const currentCity = useState('currentCity');
-const { data: cities } = $fetchResource($Resources.AutoSuggest);
+const currentCity = useCurrentCityState();
+const isLoading = useLoadingState();
 
+const { data: cities } = $fetchResource($Resources.AutoSuggest);
 const query = ref<string>('');
 const showSuggestions = ref<boolean>(false);
 
 watch(currentCity, async (nCityCode: string) => {
+  isLoading.value = true;
+
   const {
     data: result,
     pending,
@@ -17,6 +20,8 @@ watch(currentCity, async (nCityCode: string) => {
   } = await $fetchResource($Resources.Search, nCityCode, ['outlets']);
 
   searchResults.value = { result, error };
+
+  isLoading.value = false;
 });
 
 function setShowSuggestions(isShow: boolean) {
@@ -56,6 +61,7 @@ function handleCitySelection(cityCode) {
         <SearchSuggestionItem
           v-for="(city, i) in cities"
           :city="city"
+          :isLoading="isLoading"
           :key="i"
           @item-clicked="handleCitySelection"
         />

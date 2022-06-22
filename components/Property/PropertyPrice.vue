@@ -24,7 +24,16 @@ const discountAmount = computed((): number => {
     propertyPackage.adjustedDisplayRate.value;
   const discountPercentage = discountAmount / propertyPackage.displayRate.value;
 
-  return Math.floor(discountPercentage * 100);
+  return discountPercentage;
+});
+
+const currencyLocale = computed(() => {
+  switch (propertyPackage.displayRate.currency) {
+    case 'JPY':
+      return 'ja-JP';
+    case 'USD':
+      return 'en-US';
+  }
 });
 </script>
 
@@ -35,17 +44,25 @@ const discountAmount = computed((): number => {
         v-if="hasDiscount"
         class="bg-blue-2 pl-1.5 pr-1.5 w-min whitespace-nowrap text-white-1 ml-auto"
       >
-        {{ $t('package.price.save_discount', { p: discountAmount }) }}
+        {{
+          $t('package.price.save_discount', {
+            p: $n(discountAmount, 'percent'),
+          })
+        }}
       </div>
 
       <div class="_secondary-text">{{ $t('package.price.nightly') }}</div>
 
       <div class="flex items-end gap-1">
         <div class="_secondary-text line-through" v-if="hasDiscount">
-          {{ propertyPackage.displayRate.value }}
+          {{
+            $n(propertyPackage.displayRate.value, 'currency', currencyLocale)
+          }}
         </div>
 
-        <h2 class="">{{ displayPrice.currency }} {{ displayPrice.value }}</h2>
+        <h2 class="">
+          {{ $n(displayPrice.value, 'currency', currencyLocale) }}
+        </h2>
       </div>
     </div>
   </div>

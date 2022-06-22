@@ -41,14 +41,14 @@
     "pay_later": "Pay later",
     "pay_at_hotel": "Pay at hotel",
     "price": {
-      "save_discount": "Save { p }% today!",
+      "save_discount": "Save { p } today!",
       "nightly": "Nightly avg."
     },
     "filter": {
       "reviews": {
         "title": "Reviews",
         "scores": {
-          "excellent": "Excelent"
+          "excellent": "Excellent"
         }
       }
     }

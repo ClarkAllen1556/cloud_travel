@@ -62,7 +62,9 @@
     },
     "stars": {
       "title": "Star rating",
-      "scores": {}
+      "scores": {
+        "none": "No rating"
+      }
     }
   }
 }

@@ -16,8 +16,6 @@ watch(currentCity, async (nCityCode: string) => {
     error,
   } = await $fetchResource($Resources.Search, nCityCode, ['outlets']);
 
-  console.log(error.value);
-
   searchResults.value = { result, error };
 });
 

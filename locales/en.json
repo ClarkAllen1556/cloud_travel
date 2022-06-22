@@ -1,6 +1,8 @@
 {
   "alt": {
-    "logo": "CloudTravel logo"
+    "logo": "CloudTravel logo",
+    "search_icon": "Search icon",
+    "error_icon": "Error icon"
   },
   "local": {
     "lang": "English",
@@ -15,7 +17,11 @@
     "login": "Log in"
   },
   "action": {
-    "search": "Search",
+    "search": {
+      "title": "Search",
+      "no_items": "Sorry! We couldn't find any properties for your search.",
+      "error": "Opps, something went wrong."
+    },
     "map": {
       "view": "Show on map"
     },

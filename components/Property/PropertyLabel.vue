@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-// todo abstract this into a composable
 enum FoodCode {
   roomOnly,
   breakfast,

@@ -32,7 +32,6 @@ const cheapestPackage = computed((): Package => {
 });
 
 const displayFoodPackage = computed((): boolean => {
-  // TODO this should use composable food type
   switch (cheapestPackage.value.foodCode) {
     case 1:
     case 7:
@@ -71,7 +70,6 @@ const displayFoodPackage = computed((): boolean => {
         </div>
 
         <div class="flex gap-1">
-          <!--   TODO this should be done in loop and also be limited to three labels before hiding rest   -->
           <PropertyLabel
             v-if="displayFoodPackage"
             :foodCode="cheapestPackage.foodCode"

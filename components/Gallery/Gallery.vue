@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-// TODO make this into composable
 type PropertyImage = {
   caption?: string;
   url: string;

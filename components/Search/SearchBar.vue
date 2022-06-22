@@ -1,19 +1,24 @@
 <script lang="ts" setup>
 const { $fetchResource, $Resources } = useNuxtApp();
 
+const searchResults = useSearchState();
 const currentCity = useState('currentCity');
-const searchResults = useState('searchResults');
 const { data: cities } = $fetchResource($Resources.AutoSuggest);
 
 const query = ref<string>('');
 const showSuggestions = ref<boolean>(false);
 
 watch(currentCity, async (nCityCode: string) => {
-  const { data: results } = await $fetchResource($Resources.Search, nCityCode, [
-    'outlets',
-  ]);
+  const {
+    data: result,
+    pending,
+    refresh,
+    error,
+  } = await $fetchResource($Resources.Search, nCityCode, ['outlets']);
 
-  searchResults.value = results;
+  console.log(error.value);
+
+  searchResults.value = { result, error };
 });
 
 function setShowSuggestions(isShow: boolean) {
@@ -60,7 +65,7 @@ function handleCitySelection(cityCode) {
     </div>
 
     <div class="ml-auto">
-      <Button :label="$t('action.search')" />
+      <Button :label="$t('action.search.title')" />
     </div>
   </div>
 </template>

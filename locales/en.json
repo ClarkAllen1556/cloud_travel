@@ -24,6 +24,9 @@
       "price": "Price (lowest first)",
       "review": "Reviews",
       "discount": "Discount"
+    },
+    "filter": {
+      "clear": "CLEAR"
     }
   },
   "rating": {
@@ -43,14 +46,23 @@
     "price": {
       "save_discount": "Save { p } today!",
       "nightly": "Nightly avg."
-    },
-    "filter": {
-      "reviews": {
-        "title": "Reviews",
-        "scores": {
-          "excellent": "Excellent"
-        }
+    }
+  },
+  "filter": {
+    "reviews": {
+      "title": "Reviews",
+      "scores": {
+        "excellent": "Excellent",
+        "veryGood": "Very good",
+        "good": "Good",
+        "fair": "Fair",
+        "poor": "Poor",
+        "noReview": "No review"
       }
+    },
+    "stars": {
+      "title": "Star rating",
+      "scores": {}
     }
   }
 }

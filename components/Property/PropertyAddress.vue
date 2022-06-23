@@ -13,7 +13,7 @@ const { propertyAddress, propertyCode } = defineProps<{
 
     <span>
       <NuxtLink :to="`/map/${propertyCode}`">
-        ({{ $t('actions.map.view') }})
+        ({{ $t('action.map.view') }})
       </NuxtLink>
     </span>
   </div>
